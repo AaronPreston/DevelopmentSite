@@ -78,7 +78,7 @@ body {
 }
 
 .projects {
-  visibility: collapse;
+  display: none;
   color: rgb(228, 228, 228);
   font-family: "Roboto", sans-serif;
   margin-left: 100px;
@@ -130,8 +130,10 @@ body {
 
 .resume {
   position: fixed;
-  right: -50%;
-  width: 50%;
+  display: inline-block;
+  text-align: center;
+  right: -100%;
+  width: 100%;
   height: 100%;
   top: 0;
   background-color: rgb(247, 247, 247);
@@ -139,28 +141,28 @@ body {
 }
 
 .resume-title-bar {
-  position: absolute;
-  right: 100%;
-  width: 38px;
-  height: 100%;
-  top: 0;
+  position: fixed;
+  border-radius: 100%;
+  right: 16px;
+  width: 80px;
+  height: 80px;
+  bottom: 16px;
   background-color: rgb(34, 34, 34);
   cursor: pointer;
 }
 
 .resume-title {
-  transform: rotate(90deg);
   text-align: center;
   position: relative;
-  top: 40%;
-  font-size: 28px;
+  top: 15px;
+  left: 1px;
+  font-size: 35px;
 }
 
 .resume img {
   object-fit: contain;
   width: auto;
   height: 100%;
-  margin-left: 10%;
 }
 
 @media only screen and (max-width: 1600px) {
@@ -230,6 +232,6 @@ body {
   }
 
   .resume {
-    visibility: collapse;
+    display: none;
   }
 }

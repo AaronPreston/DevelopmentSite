@@ -26,9 +26,11 @@ $(document).click(function () {
 
 $(".resume-title-bar").click(function () {
   if (resumeOpened) {
-    $(".resume").css("right", "-50%");
+    $(".resume").css("right", "-100%");
+    $(".resume-title").html("<i class='fas fa-file'></i>");
   } else {
     $(".resume").css("right", "0%");
+    $(".resume-title").html("<i class='fas fa-times'></i>");
   }
   resumeOpened = !resumeOpened;
 });
@@ -37,7 +39,7 @@ function nextScreen() {
   if (clickCount == 1) {
     $("#back-text").html("Let's look.");
     $("#front-text").html("");
-    $(".projects").css("visibility", "visible");
+    $(".projects").css("display", "block");
     $(".tap-anywhere").remove();
   }
 }
